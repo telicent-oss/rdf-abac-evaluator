@@ -1,0 +1,68 @@
+PREFIX authz: <http://telicent.io/security#>
+
+[] authz:user "u1" ;
+   authz:userAttribute "engineer" , "employee" ;
+   .
+
+[] authz:user "u2" ;
+   authz:userAttribute "engineer" , "contractor" ;
+   .
+
+[] authz:user "u3" ;
+   authz:userAttribute "clearance=secret";
+   authz:userAttribute "nationality=GBR";
+   authz:userAttribute "deployed_organisation=TOG";
+   authz:userAttribute "email='u3@telicent.io'";
+   .
+
+[] authz:hierarchy [ authz:attribute "clearance" ;
+                     authz:attributeValues "ordinary, secret, top-secret" ];
+   .
+
+[] authz:user "employee1" ;
+   authz:userAttribute "engineer" , "employee" ;
+   .
+
+[] authz:user "employee2" ;
+   authz:userAttribute "engineer" , "contractor" ;
+   .
+
+[] authz:user "employee3" ;
+   authz:userAttribute "engineer" , "permanent" ;
+   .
+
+[] authz:user "employee2" ;
+   authz:userAttribute "credentials=phd";
+   .
+
+[] authz:user "employee1" ;
+   authz:userAttribute "credentials=ordinary-degree";
+   authz:userAttribute "status=public";
+   authz:userAttribute "email='e1@telicent.io'";
+   .
+
+[] authz:hierarchy [ authz:attribute "credentials" ;
+                     authz:attributeValues "hnc, hnd, ordinary-degree, honours-degree, phd" ];
+   .
+
+[] authz:user "u1" ;
+    authz:userAttribute "manager";
+    authz:userAttribute "email", "'u1@telicent.io'";
+    authz:userAttribute "status=sensitive";
+    .
+
+[] authz:user "u2" ;
+    authz:userAttribute "engineer";
+    authz:userAttribute "email='u2@telicent.io'";
+    authz:userAttribute "status=public";
+    .
+
+[] authz:user "u3" ;
+    authz:userAttribute "nothing";
+    ## No status attribute
+    .
+
+[] authz:hierarchy [
+        authz:attribute "status" ;
+        authz:attributeValues "public, confidential, sensitive, private"
+    ] .

@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPattern": "/hierarchies/lookup/.*"
+    },
+    "response": {
+        "status": 200,
+        "fixedDelayMilliseconds": 50,
+        "body": "{\"tiers\":[\"hnc\",\"hnd\",\"ordinary-degree\",\"honours-degree\",\"phd\"]}"
+    }
+}
+
+

@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Local Evaluator with config file" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="io.telicent.attribute.evaluator.ALEServer" />
+    <module name="rdf-abac-evaluator" />
+    <option name="PROGRAM_PARAMETERS" value="--config &quot;file:src/test/resources/test_config.json&quot;" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="io.telicent.attribute.evaluator.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

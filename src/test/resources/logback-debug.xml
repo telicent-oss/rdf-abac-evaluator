@@ -1,0 +1,16 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{ISO8601} [%X{Request-ID:-Server}] [%X{JwtUser:-&lt;anon&gt;}] %-5level %logger{0} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+    </root>
+    
+    <!-- Useful levels -->
+    <logger name="org.apache.jena" level="WARN"/>
+    <logger name="org.apache.jena.fuseki" level="WARN"/>
+    <logger name="io.telicent" level="WARN"/>
+    <logger name="org.eclipse.jetty" level="WARN"/>
+</configuration>

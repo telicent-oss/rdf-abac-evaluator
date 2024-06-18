@@ -1,0 +1,21 @@
+services:
+  attribute_label_evaluator:
+    environment:
+      ARGS: "--port 64431 --attrStore http://attribute-store-server.local:64331 --cacheEnabled true"
+    depends_on:
+        - simple_attribute_store_server
+
+  simple_attribute_store_server:
+      image: io.telicent/rdf-abac-evaluator
+      build:
+        context: .
+        dockerfile: Dockerfile
+      environment:
+        ARGS: "--port 64331 --attrStore /config/sample_attributes.ttl"
+        CLASSNAME: "io.telicent.attribute.store.SASServer"
+      ports:
+        - 64331:64331
+      networks:
+        default:
+          aliases:
+            - attribute-store-server.local

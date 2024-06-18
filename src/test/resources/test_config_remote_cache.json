@@ -1,0 +1,6 @@
+{
+  "userAttrStore" : "http://localhost:64331",
+  "cachingEnabled" : "true",
+  "cacheExpiryTime" : "PT20S",
+  "port" : "12345"
+}

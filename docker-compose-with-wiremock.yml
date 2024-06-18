@@ -1,0 +1,14 @@
+services:
+  attribute_label_evaluator:
+    environment:
+      ARGS: "--port 64431 --attrStore http://wiremock.local:8080 --cacheEnabled true"
+    depends_on:
+      - wiremock
+  wiremock:
+    volumes:
+      - './wiremock/:/home/wiremock'
+    image: 'wiremock/wiremock:2.35.0'
+    networks:
+      default:
+        aliases:
+          - wiremock.local

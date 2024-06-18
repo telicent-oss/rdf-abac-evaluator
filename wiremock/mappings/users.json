@@ -1,0 +1,17 @@
+{
+    "request":
+    {
+        "method": "GET",
+        "urlPattern": "/users/lookup/.*"
+    },
+    "response":
+    {
+        "status": 200,
+        "body": "{\"attributes\":[\"contractor\",\"credentials=phd\",\"engineer\"]}",
+        "fixedDelayMilliseconds": 50,
+        "headers":
+        {
+            "Content-Type": "application/json"
+        }
+    }
+}

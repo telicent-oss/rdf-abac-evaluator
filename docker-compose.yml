@@ -1,0 +1,15 @@
+services:
+  attribute_label_evaluator:
+    image: io.telicent/rdf-abac-evaluator
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      ARGS: "--port 64431 --attrStore file:/config/sample_attributes.ttl"
+      CLASSNAME: "io.telicent.attribute.evaluator.ALEServer"
+    ports:
+      - 64431:64431
+    networks:
+      default:
+        aliases:
+          - label-evaluator.local
