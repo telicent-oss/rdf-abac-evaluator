@@ -100,6 +100,7 @@
     <plugin.license>4.5</plugin.license>
     <plugin.shade>3.6.0</plugin.shade>
     <plugin.sonatype>1.7.0</plugin.sonatype>
+    <plugin.source>3.3.1</plugin.source>
     <plugin.surefire>3.2.5</plugin.surefire>
   </properties>
 
@@ -473,6 +474,21 @@
             <phase>validate</phase>
             <goals>
               <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Source Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>${plugin.source}</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>jar-no-fork</goal>
             </goals>
           </execution>
         </executions>
