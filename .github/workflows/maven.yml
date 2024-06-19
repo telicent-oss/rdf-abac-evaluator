@@ -22,3 +22,20 @@ jobs:
       MAVEN_DEBUG_ARGS: -Dlogback.configurationFile=logback-debug.xml
       JAVA_VERSION: 21
     secrets: inherit
+
+  docker-build:
+    needs: maven-build
+    uses: telicent-oss/shared-workflows/.github/workflows/docker-push-to-registries.yml@main
+    with:
+      APP_NAME: rdf-abac-evaluator
+      APP_NAME_PREFIX: ""
+      PATH: .
+      DOCKERFILE: ./Dockerfile
+      VERSION: ${{ needs.maven-build.outputs.version }}
+      TARGET: rdf-abac-evaluator
+      BUILD_ARGS: |
+        PROJECT_VERSION=${{ needs.maven-build.outputs.version }}
+      USES_MAVEN: true
+      # Container image is built for Java 21 to be as up to date as possible
+      JAVA_VERSION: 21
+    secrets: inherit

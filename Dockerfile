@@ -4,7 +4,7 @@
 
 # syntax=docker/dockerfile:1.7
 
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:21-jre as rdf-abac-evaluator
 
 WORKDIR /app
 
