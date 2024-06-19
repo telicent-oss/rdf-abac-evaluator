@@ -62,7 +62,7 @@
 
     <!-- External dependency versions -->
     <ver.caffeine>2.8.0</ver.caffeine>
-    <ver.jetty>12.0.9</ver.jetty>
+    <ver.jetty>12.0.10</ver.jetty>
     <!-- Logging dependency versions -->
     <ver.slf4j>2.0.13</ver.slf4j>
     <ver.logback>1.5.6</ver.logback>
@@ -91,7 +91,7 @@
 
     <!-- Plugin Versioning -->
     <plugin.cyclonedx>2.8.0</plugin.cyclonedx>
-    <plugin.dependency>3.6.1</plugin.dependency>
+    <plugin.dependency>3.7.0</plugin.dependency>
     <plugin.exec>3.3.0</plugin.exec>
     <plugin.gpg>3.2.4</plugin.gpg>
     <plugin.jacoco>0.8.12</plugin.jacoco>
@@ -101,7 +101,7 @@
     <plugin.shade>3.6.0</plugin.shade>
     <plugin.sonatype>1.7.0</plugin.sonatype>
     <plugin.source>3.3.1</plugin.source>
-    <plugin.surefire>3.2.5</plugin.surefire>
+    <plugin.surefire>3.3.0</plugin.surefire>
   </properties>
 
   <dependencies>
