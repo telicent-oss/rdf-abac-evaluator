@@ -12,5 +12,7 @@ RUN mkdir /config
 
 COPY src/main/resources/* /config/
 
-COPY target/rdf-abac-evaluator-1.1-SNAPSHOT.jar /app/app.jar
+ARG PROJECT_VERSION
+
+COPY target/rdf-abac-evaluator-${PROJECT_VERSION}.jar /app/app.jar
 ENTRYPOINT java -cp /app/app.jar $CLASSNAME $ARGS

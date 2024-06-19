@@ -12,6 +12,8 @@ server.log
 *.iws
 *.iml
 *.ipr
+release.properties
+pom.xml.releaseBackup
 
 ### Eclipse ###
 .apt_generated
