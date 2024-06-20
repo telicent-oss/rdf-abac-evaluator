@@ -4,7 +4,7 @@
 
   <groupId>io.telicent</groupId>
   <artifactId>rdf-abac-evaluator</artifactId>
-  <version>1.2.1</version>
+  <version>1.2.2-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>Telicent - RDF ABAC Evaluator</name>
   <description>Provides a REST service for RDF ABAC evaluation</description>
@@ -36,7 +36,7 @@
     <developerConnection>scm:git:ssh://git@github.com/telicent-oss/rdf-abac-evaluator
         </developerConnection>
     <url>https://github.com/telicent-oss/rdf-abac-evaluator</url>
-    <tag>1.2.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
