@@ -8,6 +8,9 @@
   <artifactId>rdf-abac-evaluator</artifactId>
   <version>1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
+  <name>Telicent - RDF ABAC Evaluator</name>
+  <description>Provides a REST service for RDF ABAC evaluation</description>
+  <url>https://github.com/telicent-oss/rdf-abac-evaluator</url>
 
   <developers>
     <developer>
