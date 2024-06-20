@@ -1,0 +1,7 @@
+# REST Service for RDF Attribute Based Access Control evaluation
+
+# 1.2.1 
+- Minor fixes to process following v1.2.0 - including missing change log.
+
+# 1.2.0
+- First Open Source commit.

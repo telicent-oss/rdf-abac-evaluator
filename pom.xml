@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.telicent</groupId>
   <artifactId>rdf-abac-evaluator</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.2.2-SNAPSHOT</version>
   <packaging>jar</packaging>
+  <name>Telicent - RDF ABAC Evaluator</name>
+  <description>Provides a REST service for RDF ABAC evaluation</description>
+  <url>https://github.com/telicent-oss/rdf-abac-evaluator</url>
 
   <developers>
     <developer>
@@ -257,8 +258,7 @@
               <outputFile>target/${project.artifactId}-${project.version}.jar</outputFile>
               <shadedArtifactAttached>true</shadedArtifactAttached>
               <transformers>
-                <transformer implementation=
-                                                 "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <mainClass>io.telicent.attribute.evaluator.ALEServer</mainClass>
                 </transformer>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
