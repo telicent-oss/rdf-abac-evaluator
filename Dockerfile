@@ -10,6 +10,9 @@ WORKDIR /app
 
 RUN mkdir /config
 
+RUN useradd -Mg root telicent-service
+USER telicent-service
+
 COPY src/main/resources/* /config/
 
 ARG PROJECT_VERSION
