@@ -75,7 +75,7 @@
     <ver.log4j2>2.20.0</ver.log4j2>
     <ver.mockito>5.12.0</ver.mockito>
     <ver.mockito-inline>5.2.0</ver.mockito-inline>
-    <ver.wiremock>3.9.0</ver.wiremock>
+    <ver.wiremock>3.9.1</ver.wiremock>
 
     <!-- Addressing dependency issues -->
     <ver.commons-compress>1.26.2</ver.commons-compress>
