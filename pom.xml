@@ -59,13 +59,13 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- Internal dependency versions -->
-    <ver.rdf-abac>0.71.2</ver.rdf-abac>
+    <ver.rdf-abac>0.71.4</ver.rdf-abac>
 
     <!-- External dependency versions -->
     <ver.caffeine>2.8.0</ver.caffeine>
-    <ver.jetty>12.0.11</ver.jetty>
+    <ver.jetty>12.0.12</ver.jetty>
     <!-- Logging dependency versions -->
-    <ver.slf4j>2.0.13</ver.slf4j>
+    <ver.slf4j>2.0.16</ver.slf4j>
     <ver.logback>1.5.6</ver.logback>
 
     <!-- Test dependency versions -->
@@ -78,7 +78,7 @@
     <ver.wiremock>3.9.1</ver.wiremock>
 
     <!-- Addressing dependency issues -->
-    <ver.commons-compress>1.26.2</ver.commons-compress>
+    <ver.commons-compress>1.27.0</ver.commons-compress>
 
     <!-- License P Configuration -->
     <license.header.path>${project.basedir}</license.header.path>
@@ -91,7 +91,7 @@
     <coverage.minimum>0.8</coverage.minimum>
 
     <!-- Plugin Versioning -->
-    <plugin.cyclonedx>2.8.0</plugin.cyclonedx>
+    <plugin.cyclonedx>2.8.1</plugin.cyclonedx>
     <plugin.dependency>3.7.1</plugin.dependency>
     <plugin.gpg>3.2.4</plugin.gpg>
     <plugin.jacoco>0.8.12</plugin.jacoco>
