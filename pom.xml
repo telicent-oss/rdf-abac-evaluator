@@ -63,10 +63,10 @@
 
     <!-- External dependency versions -->
     <ver.caffeine>2.8.0</ver.caffeine>
-    <ver.jetty>12.0.12</ver.jetty>
+    <ver.jetty>12.0.13</ver.jetty>
     <!-- Logging dependency versions -->
     <ver.slf4j>2.0.16</ver.slf4j>
-    <ver.logback>1.5.7</ver.logback>
+    <ver.logback>1.5.8</ver.logback>
 
     <!-- Test dependency versions -->
     <ver.jackson>2.17.2</ver.jackson>
