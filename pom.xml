@@ -59,26 +59,27 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- Internal dependency versions -->
-    <ver.rdf-abac>0.71.7</ver.rdf-abac>
+    <dependency.rdf-abac>0.71.9</dependency.rdf-abac>
 
     <!-- External dependency versions -->
-    <ver.caffeine>2.8.0</ver.caffeine>
-    <ver.jetty>12.0.13</ver.jetty>
+    <dependency.caffeine>2.8.0</dependency.caffeine>
+    <dependency.jetty>12.0.14</dependency.jetty>
     <!-- Logging dependency versions -->
-    <ver.slf4j>2.0.16</ver.slf4j>
-    <ver.logback>1.5.8</ver.logback>
+    <dependency.slf4j>2.0.16</dependency.slf4j>
+    <dependency.logback>1.5.8</dependency.logback>
 
     <!-- Test dependency versions -->
-    <ver.jackson>2.17.2</ver.jackson>
-    <ver.junit5>5.11.0</ver.junit5>
-    <ver.junit5-platform>1.11.0</ver.junit5-platform>
-    <ver.log4j2>2.20.0</ver.log4j2>
-    <ver.mockito>5.13.0</ver.mockito>
-    <ver.mockito-inline>5.2.0</ver.mockito-inline>
-    <ver.wiremock>3.9.1</ver.wiremock>
+    <dependency.jackson>2.18.0</dependency.jackson>
+    <dependency.junit5>5.11.1</dependency.junit5>
+    <dependency.junit5-platform>1.11.1</dependency.junit5-platform>
+    <dependency.log4j2>2.20.0</dependency.log4j2>
+    <dependency.mockito>5.14.0</dependency.mockito>
+    <dependency.mockito-inline>5.2.0</dependency.mockito-inline>
+    <dependency.wiremock>3.9.1</dependency.wiremock>
 
     <!-- Addressing dependency issues -->
-    <ver.commons-compress>1.27.1</ver.commons-compress>
+    <dependency.commons-compress>1.27.1</dependency.commons-compress>
+    <dependency.protobuf>4.28.2</dependency.protobuf>
 
     <!-- License P Configuration -->
     <license.header.path>${project.basedir}</license.header.path>
@@ -93,11 +94,11 @@
     <!-- Plugin Versioning -->
     <plugin.cyclonedx>2.8.1</plugin.cyclonedx>
     <plugin.dependency>3.8.0</plugin.dependency>
-    <plugin.gpg>3.2.6</plugin.gpg>
+    <plugin.gpg>3.2.7</plugin.gpg>
     <plugin.jacoco>0.8.12</plugin.jacoco>
     <plugin.jar>3.4.2</plugin.jar>
-    <plugin.javadoc>3.10.0</plugin.javadoc>
-    <plugin.license>4.5</plugin.license>
+    <plugin.javadoc>3.10.1</plugin.javadoc>
+    <plugin.license>4.6</plugin.license>
     <plugin.shade>3.6.0</plugin.shade>
     <plugin.sonatype>1.7.0</plugin.sonatype>
     <plugin.source>3.3.1</plugin.source>
@@ -109,11 +110,15 @@
     <dependency>
       <groupId>io.telicent.jena</groupId>
       <artifactId>rdf-abac-eval</artifactId>
-      <version>${ver.rdf-abac}</version>
+      <version>${dependency.rdf-abac}</version>
       <exclusions>
         <exclusion>
           <groupId>org.slf4j</groupId>
           <artifactId>slf4j-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>com.google.protobuf</groupId>
+          <artifactId>protobuf-java</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -121,24 +126,24 @@
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-server</artifactId>
-      <version>${ver.jetty}</version>
+      <version>${dependency.jetty}</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-security</artifactId>
-      <version>${ver.jetty}</version>
+      <version>${dependency.jetty}</version>
     </dependency>
 
     <!-- Logging -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>${ver.slf4j}</version>
+      <version>${dependency.slf4j}</version>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>${ver.logback}</version>
+      <version>${dependency.logback}</version>
       <exclusions>
         <exclusion>
           <groupId>org.slf4j</groupId>
@@ -151,25 +156,25 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>${ver.junit5}</version>
+      <version>${dependency.junit5}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-suite</artifactId>
-      <version>${ver.junit5-platform}</version>
+      <version>${dependency.junit5-platform}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.wiremock</groupId>
       <artifactId>wiremock-standalone</artifactId>
-      <version>${ver.wiremock}</version>
+      <version>${dependency.wiremock}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-inline</artifactId>
-      <version>${ver.mockito-inline}</version>
+      <version>${dependency.mockito-inline}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -181,19 +186,19 @@
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-junit-jupiter</artifactId>
-      <version>${ver.mockito}</version>
+      <version>${dependency.mockito}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
-      <version>${ver.jackson}</version>
+      <version>${dependency.jackson}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>${ver.jackson}</version>
+      <version>${dependency.jackson}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -207,8 +212,15 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-compress</artifactId>
-      <version>${ver.commons-compress}</version>
+      <version>${dependency.commons-compress}</version>
     </dependency>
+    <!-- Addressing CVE-2024-7254 -->
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>${dependency.protobuf}</version>
+    </dependency>
+
   </dependencies>
 
   <repositories>
@@ -396,6 +408,8 @@
                 <exclude>**/*.yml</exclude>
                 <exclude>**/*.json</exclude>
                 <exclude>**/*.xml</exclude>
+                <!-- Trivy cache -->
+                <exclude>.trivy/**</exclude>
               </excludes>
             </licenseSet>
           </licenseSets>
