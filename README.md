@@ -1,6 +1,5 @@
 # RDF ABAC Evaluator
-This is a REST service encompassing the RDF ABAC label evaluation service. You can find out more at the [rdf-abac](https://github.com/Telicent-io/public-rdf-abac) repo for more details).
-
+This is a REST service encompassing the RDF ABAC label evaluation service. You can find out more at the [rdf-abac](https://github.com/telicent-oss/rdf-abac)
 Simply put, the evaluator calls the Access Service for user and hierarchy information, which is cached in an age-off
 manner, it then makes use of the rdf-abac evaluator to establish whether the given request evaluates true or false.
 
