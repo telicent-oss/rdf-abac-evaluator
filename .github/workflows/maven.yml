@@ -25,7 +25,7 @@ jobs:
 
   docker-build:
     needs: maven-build
-    uses: telicent-oss/shared-workflows/.github/workflows/docker-push-to-registries.yml@main
+    uses: telicent-oss/shared-workflows/.github/workflows/docker-push-to-registries.yml@70860aaf0cb621030863d9b535e57ddf3aa86c2d
     with:
       APP_NAME: rdf-abac-evaluator
       APP_NAME_PREFIX: ""
