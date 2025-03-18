@@ -1,4 +1,6 @@
 # REST Service for RDF Attribute Based Access Control evaluation
+# 1.2.3
+- Update Telicent Base Image
 
 # 1.2.2
 - Using Telicent Base Image
