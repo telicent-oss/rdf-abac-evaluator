@@ -4,7 +4,7 @@
 
   <groupId>io.telicent</groupId>
   <artifactId>rdf-abac-evaluator</artifactId>
-  <version>1.2.3-SNAPSHOT</version>
+  <version>1.2.4-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>Telicent - RDF ABAC Evaluator</name>
   <description>Provides a REST service for RDF ABAC evaluation</description>
