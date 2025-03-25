@@ -38,5 +38,9 @@ build/
 ### Mac OS ###
 .DS_Store
 
-### Trvy cache ###
+### Trivy cache ###
 .trivy/
+
+## Release
+pom.xml.releaseBackup
+release.properties
