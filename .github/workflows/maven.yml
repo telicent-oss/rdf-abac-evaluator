@@ -12,7 +12,7 @@ on:
 
 jobs:
   maven-build:
-    uses: telicent-oss/shared-workflows/.github/workflows/maven.yml@main
+    uses: telicent-oss/shared-workflows/.github/workflows/maven.yml@TELDEVOPS-591
     with:
       # No Docker based tests in this repository
       USES_DOCKERHUB_IMAGES: false
@@ -25,7 +25,7 @@ jobs:
 
   docker-build:
     needs: maven-build
-    uses: telicent-oss/shared-workflows/.github/workflows/docker-push-to-registries.yml@main
+    uses: telicent-oss/shared-workflows/.github/workflows/docker-push-to-registries.yml@TELDEVOPS-591
     with:
       APP_NAME: rdf-abac-evaluator
       APP_NAME_PREFIX: ""
