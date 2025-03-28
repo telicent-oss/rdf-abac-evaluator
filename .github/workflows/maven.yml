@@ -21,6 +21,7 @@ jobs:
       MAIN_BRANCH: main
       MAVEN_DEBUG_ARGS: -Dlogback.configurationFile=logback-debug.xml
       JAVA_VERSION: 21
+      PUBLISH_JACOCO_REPORT: true
     secrets: inherit
 
   docker-build:
