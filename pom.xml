@@ -70,8 +70,8 @@
 
     <!-- Test dependency versions -->
     <dependency.jackson>2.18.3</dependency.jackson>
-    <dependency.junit5>5.12.1</dependency.junit5>
-    <dependency.junit5-platform>1.12.1</dependency.junit5-platform>
+    <dependency.junit5>5.12.2</dependency.junit5>
+    <dependency.junit5-platform>1.12.2</dependency.junit5-platform>
     <dependency.log4j2>2.20.0</dependency.log4j2>
     <dependency.mockito>5.17.0</dependency.mockito>
     <dependency.mockito-inline>5.2.0</dependency.mockito-inline>
