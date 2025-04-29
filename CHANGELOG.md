@@ -1,5 +1,8 @@
 # REST Service for RDF Attribute Based Access Control evaluation
 
+# 1.2.5
+- Build improvement
+
 # 1.2.4
 - Build improvements
 
