@@ -73,7 +73,7 @@
     <dependency.junit5>5.12.2</dependency.junit5>
     <dependency.junit5-platform>1.12.2</dependency.junit5-platform>
     <dependency.log4j2>2.20.0</dependency.log4j2>
-    <dependency.mockito>5.17.0</dependency.mockito>
+    <dependency.mockito>5.18.0</dependency.mockito>
     <dependency.mockito-inline>5.2.0</dependency.mockito-inline>
     <dependency.wiremock>3.13.0</dependency.wiremock>
 
