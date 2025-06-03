@@ -88,6 +88,7 @@
     <coverage.minimum>0.8</coverage.minimum>
 
     <!-- Plugin Versioning -->
+    <plugin.compiler>3.14.0</plugin.compiler>
     <plugin.cyclonedx>2.9.1</plugin.cyclonedx>
     <plugin.dependency>3.8.1</plugin.dependency>
     <plugin.gpg>3.2.7</plugin.gpg>
@@ -108,6 +109,10 @@
       <artifactId>rdf-abac-eval</artifactId>
       <version>${dependency.rdf-abac}</version>
       <exclusions>
+        <exclusion>
+          <groupId>commons-beanutils</groupId>
+          <artifactId>commons-beanutils</artifactId>
+        </exclusion>
         <exclusion>
           <groupId>org.slf4j</groupId>
           <artifactId>slf4j-api</artifactId>
@@ -218,6 +223,14 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${plugin.compiler}</version>
+        <configuration>
+          <release>21</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${plugin.surefire}</version>
       </plugin>
@@ -261,6 +274,11 @@
                 <filter>
                   <artifact>*:*</artifact>
                   <excludes>
+                    <exclude>module-info.class</exclude>
+                    <exclude>META-INF/DEPENDENCIES</exclude>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                    <exclude>META-INF/versions/**/module-info.class</exclude>
+                    <exclude>META-INF/versions/**/OSGI-INF/MANIFEST.MF</exclude>
                     <exclude>META-INF/*.SF</exclude>
                     <exclude>META-INF/*.DSA</exclude>
                     <exclude>META-INF/*.RSA</exclude>
