@@ -59,7 +59,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- Internal dependency versions -->
-    <dependency.rdf-abac>1.0.1</dependency.rdf-abac>
+    <dependency.rdf-abac>1.0.2</dependency.rdf-abac>
 
     <!-- External dependency versions -->
     <dependency.caffeine>2.8.0</dependency.caffeine>
