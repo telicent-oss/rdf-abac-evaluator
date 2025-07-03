@@ -108,6 +108,11 @@
           <groupId>commons-beanutils</groupId>
           <artifactId>commons-beanutils</artifactId>
         </exclusion>
+        <!-- CVE-2025-48976 -->
+        <exclusion>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-fileupload2-jakarta-servlet6</artifactId>
+        </exclusion>
         <exclusion>
           <groupId>org.slf4j</groupId>
           <artifactId>slf4j-api</artifactId>
