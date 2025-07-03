@@ -41,15 +41,10 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>sonatype-oss</id>
-      <name>Sonatype OSS Snapshots</name>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+      <id>central</id>
+      <name>Maven Central Snapshots</name>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
-    <repository>
-      <id>sonatype-oss</id>
-      <name>Sonatype OSS</name>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
   </distributionManagement>
 
   <properties>
@@ -88,6 +83,7 @@
     <coverage.minimum>0.8</coverage.minimum>
 
     <!-- Plugin Versioning -->
+    <plugin.central>0.8.0</plugin.central>
     <plugin.compiler>3.14.0</plugin.compiler>
     <plugin.cyclonedx>2.9.1</plugin.cyclonedx>
     <plugin.dependency>3.8.1</plugin.dependency>
@@ -97,7 +93,6 @@
     <plugin.javadoc>3.11.2</plugin.javadoc>
     <plugin.license>5.0.0</plugin.license>
     <plugin.shade>3.6.0</plugin.shade>
-    <plugin.sonatype>1.7.0</plugin.sonatype>
     <plugin.source>3.3.1</plugin.source>
     <plugin.surefire>3.5.3</plugin.surefire>
   </properties>
@@ -112,6 +107,11 @@
         <exclusion>
           <groupId>commons-beanutils</groupId>
           <artifactId>commons-beanutils</artifactId>
+        </exclusion>
+        <!-- CVE-2025-48976 -->
+        <exclusion>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-fileupload2-jakarta-servlet6</artifactId>
         </exclusion>
         <exclusion>
           <groupId>org.slf4j</groupId>
@@ -205,19 +205,6 @@
       </exclusions>
     </dependency>
   </dependencies>
-
-  <repositories>
-    <repository>
-      <id>sonatype-oss</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
 
   <build>
     <plugins>
@@ -486,6 +473,7 @@
           </execution>
         </executions>
         <configuration>
+          <skipNotDeployed>false</skipNotDeployed> <!-- Forces SBOM generation -->
           <outputName>${project.artifactId}-${project.version}-bom</outputName>
         </configuration>
       </plugin>
@@ -505,16 +493,14 @@
       </plugin>
 
       <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>${plugin.sonatype}</version>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>${plugin.central}</version>
         <extensions>true</extensions>
         <configuration>
-          <serverId>sonatype-oss</serverId>
-          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
-          <keepStagingRepositoryOnCloseRuleFailure>true</keepStagingRepositoryOnCloseRuleFailure>
-          <stagingProgressTimeoutMinutes>15</stagingProgressTimeoutMinutes>
+          <publishingServerId>central</publishingServerId>
+          <autoPublish>true</autoPublish>
+          <waitUntil>published</waitUntil>
         </configuration>
       </plugin>
 
