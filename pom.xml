@@ -58,7 +58,7 @@
 
     <!-- External dependency versions -->
     <dependency.caffeine>2.8.0</dependency.caffeine>
-    <dependency.jetty>12.0.25</dependency.jetty>
+    <dependency.jetty>12.1.0</dependency.jetty>
     <!-- Logging dependency versions -->
     <dependency.slf4j>2.0.17</dependency.slf4j>
     <dependency.logback>1.5.18</dependency.logback>
@@ -128,6 +128,16 @@
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-security</artifactId>
+      <version>${dependency.jetty}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty.ee10</groupId>
+      <artifactId>jetty-ee10-servlet</artifactId>
+      <version>${dependency.jetty}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty.ee10</groupId>
+      <artifactId>jetty-ee10-servlets</artifactId>
       <version>${dependency.jetty}</version>
     </dependency>
 
