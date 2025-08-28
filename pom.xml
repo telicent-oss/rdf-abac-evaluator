@@ -130,6 +130,16 @@
       <artifactId>jetty-security</artifactId>
       <version>${dependency.jetty}</version>
     </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty.ee10</groupId>
+      <artifactId>jetty-ee10-servlet</artifactId>
+      <version>${dependency.jetty}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty.ee10</groupId>
+      <artifactId>jetty-ee10-servlets</artifactId>
+      <version>${dependency.jetty}</version>
+    </dependency>
 
     <!-- Logging -->
     <dependency>
