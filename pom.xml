@@ -58,7 +58,7 @@
 
     <!-- External dependency versions -->
     <dependency.caffeine>2.8.0</dependency.caffeine>
-    <dependency.jetty>12.1.0</dependency.jetty>
+    <dependency.jetty>12.1.1</dependency.jetty>
     <!-- Logging dependency versions -->
     <dependency.slf4j>2.0.17</dependency.slf4j>
     <dependency.logback>1.5.18</dependency.logback>
@@ -92,9 +92,9 @@
     <plugin.jar>3.4.2</plugin.jar>
     <plugin.javadoc>3.11.3</plugin.javadoc>
     <plugin.license>5.0.0</plugin.license>
-    <plugin.shade>3.6.0</plugin.shade>
+    <plugin.shade>3.6.1</plugin.shade>
     <plugin.source>3.3.1</plugin.source>
-    <plugin.surefire>3.5.3</plugin.surefire>
+    <plugin.surefire>3.5.4</plugin.surefire>
   </properties>
 
   <dependencies>
