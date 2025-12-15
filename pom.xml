@@ -54,21 +54,21 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- Internal dependency versions -->
-    <dependency.rdf-abac>1.1.3</dependency.rdf-abac>
+    <dependency.rdf-abac>1.1.4</dependency.rdf-abac>
 
     <!-- External dependency versions -->
     <dependency.caffeine>2.8.0</dependency.caffeine>
     <dependency.jetty>12.1.5</dependency.jetty>
     <!-- Logging dependency versions -->
     <dependency.slf4j>2.0.17</dependency.slf4j>
-    <dependency.logback>1.5.21</dependency.logback>
+    <dependency.logback>1.5.22</dependency.logback>
 
     <!-- Test dependency versions -->
     <dependency.jackson>2.20.1</dependency.jackson>
     <dependency.junit5>6.0.1</dependency.junit5>
     <dependency.junit5-platform>6.0.1</dependency.junit5-platform>
     <dependency.log4j2>2.20.0</dependency.log4j2>
-    <dependency.mockito>5.20.0</dependency.mockito>
+    <dependency.mockito>5.21.0</dependency.mockito>
     <dependency.mockito-inline>5.2.0</dependency.mockito-inline>
     <dependency.wiremock>3.13.2</dependency.wiremock>
 
