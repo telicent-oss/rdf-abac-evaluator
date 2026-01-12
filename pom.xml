@@ -61,12 +61,12 @@
     <dependency.jetty>12.1.5</dependency.jetty>
     <!-- Logging dependency versions -->
     <dependency.slf4j>2.0.17</dependency.slf4j>
-    <dependency.logback>1.5.23</dependency.logback>
+    <dependency.logback>1.5.24</dependency.logback>
 
     <!-- Test dependency versions -->
     <dependency.jackson>2.20.1</dependency.jackson>
-    <dependency.junit5>6.0.1</dependency.junit5>
-    <dependency.junit5-platform>6.0.1</dependency.junit5-platform>
+    <dependency.junit5>6.0.2</dependency.junit5>
+    <dependency.junit5-platform>6.0.2</dependency.junit5-platform>
     <dependency.log4j2>2.20.0</dependency.log4j2>
     <dependency.mockito>5.21.0</dependency.mockito>
     <dependency.mockito-inline>5.2.0</dependency.mockito-inline>
@@ -83,7 +83,7 @@
     <coverage.minimum>0.8</coverage.minimum>
 
     <!-- Plugin Versioning -->
-    <plugin.central>0.9.0</plugin.central>
+    <plugin.central>0.10.0</plugin.central>
     <plugin.compiler>3.14.1</plugin.compiler>
     <plugin.cyclonedx>2.9.1</plugin.cyclonedx>
     <plugin.dependency>3.9.0</plugin.dependency>
