@@ -61,7 +61,7 @@
     <dependency.jetty>12.1.5</dependency.jetty>
     <!-- Logging dependency versions -->
     <dependency.slf4j>2.0.17</dependency.slf4j>
-    <dependency.logback>1.5.25</dependency.logback>
+    <dependency.logback>1.5.26</dependency.logback>
 
     <!-- Test dependency versions -->
     <dependency.jackson>2.21.0</dependency.jackson>
