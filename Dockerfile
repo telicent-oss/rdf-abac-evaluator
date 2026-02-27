@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 
-FROM telicent/telicent-java21:1.2.40 AS rdf-abac-evaluator
+FROM telicent/telicent-java21:1.2.41 AS rdf-abac-evaluator
 
 USER root
 
