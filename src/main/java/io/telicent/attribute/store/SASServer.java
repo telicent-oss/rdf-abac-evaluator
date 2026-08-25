@@ -16,7 +16,7 @@ import io.telicent.attribute.utils.ExcludeFromJacocoGeneratedReport;
 import io.telicent.jena.abac.core.AttributesStore;
 import io.telicent.jena.abac.services.SimpleAttributesStore;
 import org.apache.jena.cmd.ArgDecl;
-import org.apache.jena.cmd.CmdGeneral;
+import org.apache.jena.cmd.CmdMain;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,7 +26,7 @@ import static io.telicent.attribute.utils.AttributeUtils.portNumber;
 /**
  * REST Server simulating Access server holding user attributes and hierarchy.
  */
-public class SASServer extends CmdGeneral {
+public class SASServer extends CmdMain {
 
     /**
      * Logger for class

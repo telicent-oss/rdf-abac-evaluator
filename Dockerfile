@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 
-FROM telicent/telicent-java21:1.2.45 AS rdf-abac-evaluator
+FROM telicent/telicent-java21:1.2.59 AS rdf-abac-evaluator
 
 USER root
 
@@ -15,7 +15,7 @@ WORKDIR /app
 
 # Copy config and application files
 COPY --chown=user:user src/main/resources/ /config/
-COPY --chown=user:user target/rdf-abac-evaluator-${PROJECT_VERSION}.jar /app/app.jar
+COPY --chown=user:user target/rdf-abac-evaluator-${PROJECT_VERSION}-server.jar /app/app.jar
 COPY --chown=user:user target/rdf-abac-evaluator-${PROJECT_VERSION}-bom.json /opt/telicent/sbom/
 
 USER user
