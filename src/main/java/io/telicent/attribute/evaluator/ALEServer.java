@@ -17,7 +17,7 @@ import org.apache.jena.atlas.json.JSON;
 import org.apache.jena.atlas.json.JsonObject;
 import org.apache.jena.cmd.ArgDecl;
 import org.apache.jena.cmd.CmdException;
-import org.apache.jena.cmd.CmdGeneral;
+import org.apache.jena.cmd.CmdMain;
 import org.apache.jena.irix.IRIException;
 import org.apache.jena.irix.IRIs;
 import org.apache.jena.irix.IRIx;
@@ -32,7 +32,7 @@ import static io.telicent.attribute.utils.AttributeUtils.*;
 /**
  * REST Server that evaluates given user and labels.
  */
-public class ALEServer extends CmdGeneral {
+public class ALEServer extends CmdMain {
 
     private static final Logger LOGGER = AttributeListEvalServer.LOGGER;
     private static final ArgDecl argPort = new ArgDecl(ArgDecl.HasValue, "port", "Port", "p");
