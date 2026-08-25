@@ -22,7 +22,15 @@ jobs:
       MAVEN_DEBUG_ARGS: -Dlogback.configurationFile=logback-debug.xml
       JAVA_VERSION: 21
       PUBLISH_JACOCO_REPORT: true
-    secrets: inherit
+    # NB - Deliberately NOT using `secrets: inherit` here.  The shared workflow enables the SonarQube scan and
+    #      quality gate purely on the presence of the SONAR_HOST_URL/SONAR_TOKEN secrets, and this repository is
+    #      no longer analysed in SonarQube.  Passing only the secrets the build actually needs leaves the
+    #      "Sonarqube code quality check" step skipped.
+    secrets:
+      MVN_USER_NAME: ${{ secrets.MVN_USER_NAME }}
+      MVN_USER_PWD: ${{ secrets.MVN_USER_PWD }}
+      GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+      GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 
   docker-build:
     needs: maven-build

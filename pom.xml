@@ -251,8 +251,15 @@
             </goals>
             <configuration>
               <createDependencyReducedPom>false</createDependencyReducedPom>
-              <outputFile>target/${project.artifactId}-${project.version}.jar</outputFile>
-              <shadedArtifactAttached>true</shadedArtifactAttached>
+              <!--
+                   NB - The shaded server JAR is a developer/container convenience only.  It is written to its own
+                        file name, and NOT attached to the project, so that the artifact published to Maven Central
+                        remains the thin JAR built by the maven-jar-plugin.  Attaching it would push a ~120MB file
+                        to Maven Central on every release.
+                        The Dockerfile copies this file, so keep the two in step.
+                   -->
+              <outputFile>target/${project.artifactId}-${project.version}-server.jar</outputFile>
+              <shadedArtifactAttached>false</shadedArtifactAttached>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <mainClass>io.telicent.attribute.evaluator.ALEServer</mainClass>
@@ -294,7 +301,8 @@
               <goal>copy-dependencies</goal>
             </goals>
             <configuration>
-              <outputDirectory>${project.basedir}/lib</outputDirectory>
+              <!-- NB - Under target/ so that mvn clean removes it, rather than accumulating in the source tree -->
+              <outputDirectory>${project.build.directory}/lib</outputDirectory>
               <includeTypes>jar</includeTypes>
               <includeScope>runtime</includeScope>
             </configuration>
@@ -481,6 +489,8 @@
         <configuration>
           <skipNotDeployed>false</skipNotDeployed> <!-- Forces SBOM generation -->
           <outputName>${project.artifactId}-${project.version}-bom</outputName>
+          <!-- NB - JSON only: both formats carry identical data, and the Dockerfile/release only use the JSON -->
+          <outputFormat>json</outputFormat>
         </configuration>
       </plugin>
 
@@ -507,6 +517,8 @@
           <publishingServerId>central</publishingServerId>
           <autoPublish>true</autoPublish>
           <waitUntil>published</waitUntil>
+          <!-- NB - Only publish the checksums Maven Central requires, rather than two extra hashes per file -->
+          <checksums>required</checksums>
         </configuration>
       </plugin>
 

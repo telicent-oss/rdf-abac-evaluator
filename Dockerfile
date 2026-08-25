@@ -15,7 +15,7 @@ WORKDIR /app
 
 # Copy config and application files
 COPY --chown=user:user src/main/resources/ /config/
-COPY --chown=user:user target/rdf-abac-evaluator-${PROJECT_VERSION}.jar /app/app.jar
+COPY --chown=user:user target/rdf-abac-evaluator-${PROJECT_VERSION}-server.jar /app/app.jar
 COPY --chown=user:user target/rdf-abac-evaluator-${PROJECT_VERSION}-bom.json /opt/telicent/sbom/
 
 USER user
